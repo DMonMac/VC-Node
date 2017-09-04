@@ -15,4 +15,11 @@ app.get('/dynamic_view', function(req, res){
    });
 });
 
+app.get('/components', function(req, res){
+  res.render('content');
+});
+
+app.use('/static', express.static('public'));
+app.use(express.static('images'));
+
 app.listen(3000);
