@@ -10,7 +10,7 @@ app.get('/first_template', function(req, res){
 
 app.get('/dynamic_view', function(req, res){
    res.render('dynamic', {
-      name: "TutorialsPoint",
+      name: "Tutorials Point",
       url:"http://www.tutorialspoint.com"
    });
 });
