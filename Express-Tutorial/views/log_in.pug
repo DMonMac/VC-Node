@@ -3,13 +3,15 @@ html
     title Log In
 
   body
-    form(action = "/", method = "POST")
+    if(message)
+      h4(message)
+    form(action = "/log_in", method = "POST")
       div
         label(for = "email") Email
-        input(email = "email")
+        input(name = "email" email = "email" required placeholder = "E-mail")
       br
       div
         label(for = "password") Password
-        input(password = "password")
+        input(name = "password" password = "password" required placeholder = "Password")
       br
       button(type = "submit") Log In
