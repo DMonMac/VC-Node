@@ -1,0 +1,15 @@
+html
+  head
+    title Log In
+
+  body
+    form(action = "/", method = "POST")
+      div
+        label(for = "email") Email
+        input(email = "email")
+      br
+      div
+        label(for = "password") Password
+        input(password = "password")
+      br
+      button(type = "submit") Log In
