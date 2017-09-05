@@ -4,15 +4,25 @@ var multer = require('multer');
 var upload = multer();
 var app = express();
 
+// mock "database"
+var clients = [
+  {first_name:"D", last_name:"Mac", email:"dmac@email.com", password:"Thisis@test", bal: 1000000},
+  {first_name:"Mac", last_name:"D", email:"macd@email.com", password:"Thisis@test2", bal: 9999999},
+  {first_name:"Fail", last_name:"Being", email:"failbeing@email.com", password:"Thisis@test3", bal: 100}
+];
 
+// Setting view engine and folder
 app.set('view engine', 'pug');
 app.set('views','./views');
 
-
+// GET methods
 app.get('/', function(req, res){
   res.render('home');
 });
 
+app.get('/client', function(req, res){
+  res.render('client_page');
+});
 
 app.get('/form', function(req, res){
   res.render('form');
