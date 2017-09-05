@@ -4,12 +4,18 @@ var multer = require('multer');
 var upload = multer();
 var app = express();
 
-app.get('/', function(req, res){
-  res.render('form');
-});
+
 
 app.set('view engine', 'pug');
 app.set('views','./views');
+
+app.get('/', function(req, res){
+  res.render('home');
+});
+
+app.get('/form', function(req, res){
+  res.render('form');
+});
 
 // for parsing application/json
 app.use(bodyParser.json());
