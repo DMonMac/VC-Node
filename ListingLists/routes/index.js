@@ -34,10 +34,11 @@ router.post('/', function(req, res){
 
    newListing.save(function(Listing){
      res.render('show_message', {
-       message: "New list added [index]", type: "success", listing: listingInfo
+       message: "New list added [index]", type: "success", listing: newListing
      });
    });
 
 });
 
+module.exports = Listing;
 module.exports = router;
