@@ -8,8 +8,22 @@ var clients = [
 ];
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
+router.get('/', function(req, res) {
   res.json(clients);
+});
+
+router.get('/:card_number([0-9]{14,})', function(req, res) {
+  var currClient = clients.filter(function(client){
+    if(client.card_number == req.params.card_number){
+      return true;
+    }
+  });
+  if(currClient.length == 1){
+    res.json(currClient[0])
+  } else {
+      res.status(404); // Set status to 404 as client was not found
+      res.json({message: "Client not found."});
+  }
 });
 
 module.exports = router;
