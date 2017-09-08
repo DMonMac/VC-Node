@@ -12,7 +12,24 @@ router.get('/', function(req, res) {
   res.json(clients);
 });
 
-router.get('/:card_number([0-9]{14,})', function(req, res) {
+router.post('/', function(req, res) {
+  console.log(clients);
+  console.log(req.body);
+  clients.map(function(){
+    for (var i=0; i<clients.length; i++){
+      if (clients[i].card_number == req.body.card_number && clients[i].password == req.body.password){
+        res.redirect('/clients/'+req.body.card_number);
+      }
+    };
+    res.send('Invalid details.');
+  });
+});
+
+
+
+
+
+router.get('/:card_number([0-9]{14,})', function(req, res){
   var currClient = clients.filter(function(client){
     if(client.card_number == req.params.card_number){
       return true;
@@ -23,7 +40,8 @@ router.get('/:card_number([0-9]{14,})', function(req, res) {
   } else {
       res.status(404); // Set status to 404 as client was not found
       res.json({message: "Client not found."});
-  }
+    }
 });
+
 
 module.exports = router;
