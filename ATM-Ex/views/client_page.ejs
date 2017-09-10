@@ -8,22 +8,26 @@
     </script>
   </head>
   <body>
-    <h1>Hello Client!</h1>
+    <h1>Hello <%= first_name %> <%= last_name %></h1>
     <h2>Balance</h2>
-    <p>Php </p>
+    <p> <%= bal %> Php </p>
 
-    <form action="/client" method="POST">
+    <form action="/clients/:card_number([0-9]{14,})/withdraw" method="POST">
       <h2>Withdraw</h2>
       <label for="withdraw_amount">How much? </label>
       <input name="withdraw_amount" required="required" placeholder="Enter amount to withdraw here" size="25"/>
       <button type="submit">Withdraw</button>
       </br></br>
     </form>
-    <form action="/client" method="POST">
+    <form action="/clients/:card_number([0-9]{14,})/deposit" method="POST">
       <h2>Deposit</h2>
       <label for="deposit_amount">How much? </label>
       <input name="deposit_amount " required="required" placeholder="Enter amount to deposit here" size="25"/>
       <button type="submit">Deposit</button>
+    </form>
+    <br></br>
+    <form action="/log-out" method="GET">
+      <button type="submit">Log Out</button>
     </form>
 
   </body>
