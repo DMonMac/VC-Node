@@ -50,12 +50,7 @@ router.post('/', function(req, res) {
 
 
 
-router.get('/log-out', function(req, res){
-   req.session.destroy(function(){
-      console.log("client logged out.")
-   });
-   res.redirect('/', index);
-});
+
 
 
 

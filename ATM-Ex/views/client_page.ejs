@@ -12,7 +12,7 @@
     <h2>Balance</h2>
     <p> <%= bal %> Php </p>
 
-    <form action="/clients/:card_number([0-9]{14,})/withdraw" method="POST">
+    <form action="/clients//withdraw" method="POST">
       <h2>Withdraw</h2>
       <label for="withdraw_amount">How much? </label>
       <input name="withdraw_amount" required="required" placeholder="Enter amount to withdraw here" size="25"/>
@@ -26,7 +26,7 @@
       <button type="submit">Deposit</button>
     </form>
     <br></br>
-    <form action="/log-out" method="GET">
+    <form action="/log-out?" method="GET">
       <button type="submit">Log Out</button>
     </form>
 
