@@ -4,7 +4,7 @@
 > Create a node.js app that runs on the console.
 
 ### LIST
-- [DiceRoll.js](#diceroll)
+- [DiceRoll.js](#dicerolljs)
 
 ### DiceRoll.js
 User inputs how many times the dice should be rolled, then the result of each roll will be displayed.
