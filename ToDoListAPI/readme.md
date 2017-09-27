@@ -30,4 +30,9 @@ For this API, you'll need [Postman](https://www.getpostman.com/) to test it out.
 
     There should also a table with the headers Key, Value, and Description. The key is any of the parameters seen in todoListModel.js (name, Created_date, status). the name key is required, so type its value in the 'Value' row. Status will only accept values from the enum array. If you set values for multiple keys simultaneously, they will be set to one object only.
 
-    If done correctly, the objects you added in the POST function should be displayed if you change the function to GET and keep the URL. 
+    If done correctly, the objects you added in the POST function should be displayed if you change the function to GET and keep the URL.
+
+- #### DELETE
+    Notice that the objects have a taskId property. If you try the GET function for http://localhost:3000/tasks/:taskId and replace ':taskId' with the value of the object's taskId, it should display the properties of that object only. By that logic, if you change the function to DELETE and send it, the object should be removed. So, if you try GET again, it should return 'null'
+
+So that's my take on some of Postman's functions.
