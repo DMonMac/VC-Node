@@ -4,7 +4,7 @@
 > Create a list using ExpressJS and NodeJS
 
 ### RUN APP
-1. Install Node.js and npm [https://docs.npmjs.com/getting-started/installing-node]
+1. [Install](https://docs.npmjs.com/getting-started/installing-node) Node.js and npm 
 2. Copy the 'ListingLists' folder to your computer.
 2. In your terminal, set your directory to inside that folder.
 3. Type `npm start`.
